@@ -4,7 +4,7 @@
 	import CarouselCard from '$lib/CarouselCard.svelte';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { images } from '$lib/imageData';
+	import { images } from '$lib/carouselImageData';
 	let { children } = $props();
 	
 	let visibleWords = $state(0);
@@ -132,7 +132,7 @@
             </div>
 
         </div>
-        <p class="indent-8 mx-8">Sam Love is a painter with too many hobbies. Growing up in depressed middle America, he tried his hand at anything hoping it would make life click. Feeling surrounded by sheer nothingness, Love struggled to make something worth his efforts. he had began drawing before he could remember, and playing piano soon after. It wasn’t until his junior year of high school he decided creating art was all he wanted to do. This resolution was guided by Sartre’s Being and Nothingness. “Man presents himself at least in this instance as a being who causes nothingness to arise in the world, inasmuch as he himself is affected with non-being to this end.”
+        <p class="indent-8 mx-32">Sam Love is a painter with too many hobbies. Growing up in depressed middle America, he tried his hand at anything hoping it would make life click. Feeling surrounded by sheer nothingness, Love struggled to make something worth his efforts. he had began drawing before he could remember, and playing piano soon after. It wasn’t until his junior year of high school he decided creating art was all he wanted to do. This resolution was guided by Sartre’s Being and Nothingness. “Man presents himself at least in this instance as a being who causes nothingness to arise in the world, inasmuch as he himself is affected with non-being to this end.”
         Surrounded by nothingness, Love found solace in being-in-itself. While objects may generate nothingess, they serve as empty containers for significance. Practicing active living, ritual, meditation, and consistent creative pursuit, Love carves meaning out of life. He explores ritual and significance in the face of mundanity. Through dream-like scenes, dimly lit streets, fields in places unknown, Love mythicizes the ordinary we all experience. He walks along the lines between reality and fantasy. All lines converge, nothing leads to everything.</p>
         
         <div class="text-right mt-4 mr-8">

@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: david-love121/Samuel-Love-Webpage # Using the repo from context
+  branch: main
+  app_id: YOUR_APP_ID # TODO: Replace with your GitHub OAuth App Client ID
+
+media_folder: "static/gallery_images"
+public_folder: "/gallery_images"
+
+collections:
+  - name: "artworks"
+    label: "Artworks"
+    folder: "src/lib/artworks"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "markdown" }

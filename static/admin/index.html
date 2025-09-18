@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <link rel="stylesheet" href="https://unpkg.com/@sveltia/cms@latest/dist/sveltia-cms.css" />
+  <script type="module">
+    import { SveltiaCMS } from 'https://unpkg.com/@sveltia/cms@latest/dist/sveltia-cms.js';
+
+    SveltiaCMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'david-love121/Samuel-Love-Webpage',
+          app_id: 'YOUR_APP_ID', // Replace with your GitHub OAuth App Client ID
+        },
+        media_folder: 'static/gallery_images',
+        public_folder: '/gallery_images',
+        collections: [
+          {
+            name: 'artworks',
+            label: 'Artworks',
+            folder: 'src/lib/artworks',
+            create: true,
+            slug: '{{slug}}',
+            fields: [
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Featured Image', name: 'image', widget: 'image' },
+              { label: 'Description', name: 'description', widget: 'markdown' },
+            ],
+          },
+        ],
+      },
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
