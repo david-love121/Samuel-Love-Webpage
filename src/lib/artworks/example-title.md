@@ -3,6 +3,7 @@ title: "Example Title"
 image: "/gallery_images/example-title.jpeg"
 caption: "Example Caption"
 description: |-
-  Example descriptio
+  Example Description
+  test new line
 displayCarousel: true
 ---

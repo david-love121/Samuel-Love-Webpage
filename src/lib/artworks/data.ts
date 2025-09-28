@@ -6,6 +6,7 @@ export interface ArtworkMetadata {
 	description: string;
 	caption?: string;
 	aspectRatio?: number;
+	displayCarousel?: boolean;
 }
 
 interface ArtworkModule {
@@ -21,6 +22,7 @@ export interface Artwork {
 	caption: string;
 	image: string;
 	aspectRatio: number;
+	displayCarousel: boolean;
 }
 
 const normalizeImagePath = (imagePath: string): string => {
@@ -45,7 +47,8 @@ const allArtworks: Artwork[] = Object.entries(modules).map(([path, module]) => {
 		description: metadata.description,
 		caption: metadata.caption ?? metadata.title,
 		image: normalizeImagePath(metadata.image),
-		aspectRatio: metadata.aspectRatio ?? 4 / 3
+		aspectRatio: metadata.aspectRatio ?? 4 / 3,
+		displayCarousel: metadata.displayCarousel ?? false
 	};
 });
 
